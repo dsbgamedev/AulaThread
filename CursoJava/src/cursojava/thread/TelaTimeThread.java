@@ -59,7 +59,7 @@ public class TelaTimeThread extends JDialog{
 		
 		
 		jButton2.setPreferredSize(new Dimension(92, 25));
-		gridBagConstraints.gridy ++;
+		gridBagConstraints.gridx ++;
 		jPanel.add(jButton2, gridBagConstraints);
 		
 		
