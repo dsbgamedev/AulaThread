@@ -30,13 +30,17 @@ public class ImplementacaoFilaThread extends Thread {
 				
 				/* Processar uma lista rotina ou processo grande do java */
 				
+				System.out.println("------------------------------------");
+				System.out.println(processar.getEmail());
+				System.out.println(processar.getNome());
+				
 				/* Depois de processar limpar a lista */
 				
 				iteracao.remove();
 				
 				//Depois que remove colocar um tempo
 				try {
-					Thread.sleep(100);
+					Thread.sleep(1000);
 				} catch (InterruptedException e) {//Dar um tempo para descarga de memoria
 					e.printStackTrace();
 				}
