@@ -28,6 +28,8 @@ public class TelaPilha extends JDialog{
 	
 	private JButton jButton = new JButton("Add lista");
 	private JButton jButton2 = new JButton("Stop");
+	
+	private ImplementacaoFilaThread fila = new ImplementacaoFilaThread();
 			
 	
 	public TelaPilha() {/*Executa o que estiver dentro no momento da abertura instanciação desse objeto*/
@@ -80,6 +82,11 @@ public class TelaPilha extends JDialog{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
+				ObjetoFilaThread filaThread = new ObjetoFilaThread();
+				filaThread.setNome(mostraTempo.getText());
+				filaThread.setEmail(mostraTempo2.getText());
+				
+				fila.add(filaThread);
 	
 			}
 		});
@@ -92,7 +99,7 @@ public class TelaPilha extends JDialog{
 			}
 		});
 		
-		
+		fila.start();
 		add(jPanel, BorderLayout.WEST);
 		setVisible(true);/*Torna a tela visivel para o usuario, sempre sera o ultimo comando*/
 	
